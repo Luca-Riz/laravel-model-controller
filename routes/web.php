@@ -13,17 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-})->name('homepage');
+Route::get('/', 'HomeController@home')->name('homepage');
 
-Route::get('/products', function () {
+Route::get('/comics', 'ComicController@comics')->name('pagina-prodotti');
 
-    $comics = config('comics');
-    $data = ['fumetti' => $comics];
 
-    return view('prodotti', $data);
-})->name('pagina-prodotti');
+// Route::get('/products', nomecontroller@metodocontroller )->name('pagina-prodotti');
+
+//     $comics = config('comics');
+//     $data = ['fumetti' => $comics];
+
+//     return view('prodotti', $data);
+// })->name('pagina-prodotti');
 
 Route::get('/footer', function () {
     return view('footer');

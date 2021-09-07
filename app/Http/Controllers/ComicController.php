@@ -1,0 +1,20 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Comic;
+
+
+class ComicController extends Controller
+{   
+    public function comics(){
+
+    $comics = Comic::all();
+
+    dd(Comic::all());
+    
+
+    return view('comics')->with('fumetti',$comics);
+    }
+}
