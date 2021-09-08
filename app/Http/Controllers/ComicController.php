@@ -10,10 +10,7 @@ class ComicController extends Controller
 {   
     public function comics(){
 
-    $comics = Comic::all();
-
-    dd(Comic::all());
-    
+    $comics = Comic::all();    
 
     return view('comics')->with('fumetti',$comics);
     }
