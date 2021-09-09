@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'HomeController@home')->name('homepage');
 
-Route::get('/comics', 'ComicController@comics')->name('prodotti');
+Route::get('/comics', 'ComicController@comics')->name('comic');
 
 
 Route::get('/footer', function () {
